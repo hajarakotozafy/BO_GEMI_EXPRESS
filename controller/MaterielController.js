@@ -1,10 +1,17 @@
-// const connection = require('./connection');
+const connection = require('./connection');
 
 // @desc    Get Materials
 // @route   GET /api/materiel
 // @access  Private
 const getMateriel = (req, res) => {
-    res.status(200).send({ 'get material': true });
+    // res.status(200).send({ 'get material': true });
+    connection.query('SELECT * FROM materiel', (err, rows) => {
+        if (err) {
+            throw err;
+        } else {
+            res.status(200).send(rows);
+        }
+    })
 };
 
 // @desc    Set Material
