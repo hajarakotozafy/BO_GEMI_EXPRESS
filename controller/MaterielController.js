@@ -4,7 +4,7 @@
 // @route   GET /api/materiel
 // @access  Private
 const getMateriel = (req, res) => {
-    res.status(200).send({ 'get material ok': true });
+    res.status(200).send({ 'get material': true });
 };
 
 // @desc    Set Material

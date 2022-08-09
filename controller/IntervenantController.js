@@ -4,7 +4,7 @@
 // @route   GET /api/intervenant
 // @access  Private
 const getIntervenant = (req, res) => {
-    res.status(200).send({ 'get intervenant ok': true });
+    res.status(200).send({ 'get intervenant': true });
 };
 
 // @desc    Set Intervenant
